@@ -1,7 +1,6 @@
 <template lang="pug">
     button(class="g-button", :class="{[`icon-${iconPosition}`]: true}")
-        svg(v-if="icon" class="icon")
-            use(:xlink:href="`#icon-${icon}`")
+        g-icon(v-if="icon", :name="icon", class="icon")
         .content
             slot
 </template>
