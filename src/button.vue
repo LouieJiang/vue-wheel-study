@@ -1,6 +1,7 @@
 <template lang="pug">
     button(class="g-button", :class="{[`icon-${iconPosition}`]: true}")
         g-icon(v-if="icon", :name="icon", class="icon")
+        g-icon(class="loading", name="loading")
         .content
             slot
 </template>
@@ -21,6 +22,15 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+    @keyframes spin
+        0%
+            transform rotate(0deg)
+
+        100%
+            transform rotate(360deg)
+
+
+
     .g-button
         font-size var(--font-size)
         height var(--button-height)
@@ -58,4 +68,8 @@ export default {
             > .icon
                 order 2
                 margin 0 0 0 .5em
+
+        .loading
+            animation spin 2s infinite linear;
+
 </style>
