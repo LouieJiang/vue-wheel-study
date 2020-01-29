@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
+
 <head>
     <meta charset="UTF-8">
     <title>vue轮子</title>
 </head>
 <style lang="s">
-    *{
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
-    :root{
-        --button-height:32px;
+
+    :root {
+        --button-height: 32px;
         --font-size: 14px;
         --button-bg: white;
         --button-action-bg: #eee;
@@ -20,17 +22,23 @@
         --border-color: #999;
         --border-color-hover: #666;
     }
+
 </style>
 <style>
-    #app{
+    #app {
         margin: 20px;
     }
 
 </style>
+
 <body>
-<div id="app">
-    <g-button></g-button>
-</div>
+    <div id="app">
+        <g-button icon="" icon-position="up">设置</g-button>
+        <g-button icon="settings">设置</g-button>
+        <g-button icon="settings" icon-position="right">设置</g-button>
+    </div>
 </body>
 <script src="./src/app.js"></script>
+<script src="//at.alicdn.com/t/font_1618695_b6204zn6z3u.js"></script>
+
 </html>
