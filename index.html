@@ -33,9 +33,10 @@
 
 <body>
     <div id="app">
-        <g-button icon="" icon-position="up">设置</g-button>
+        <g-button >设置</g-button>
         <g-button icon="settings">设置</g-button>
         <g-button icon="settings" icon-position="right">设置</g-button>
+        <g-button icon="settings" icon-position="right" :loading="loading1" @click="loading1=!loading1">点击后进入loading</g-button>
     </div>
 </body>
 <script src="./src/app.js"></script>

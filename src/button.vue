@@ -1,7 +1,7 @@
 <template lang="pug">
-    button(class="g-button", :class="{[`icon-${iconPosition}`]: true}")
-        g-icon(v-if="icon", :name="icon", class="icon")
-        g-icon(class="loading", name="loading")
+    button(class="g-button", :class="{[`icon-${iconPosition}`]: true}", @click="$emit('click')")
+        g-icon(v-if="icon&&!loading", :name="icon", class="icon")
+        g-icon(v-if="loading" class="loading icon", name="loading")
         .content
             slot
 </template>
@@ -10,6 +10,7 @@
 export default {
   props: {
     icon: {},
+    loading: {type:Boolean, default: false },
     iconPosition: {
       type: String,
       default: 'left',
