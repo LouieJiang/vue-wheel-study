@@ -39,7 +39,7 @@ export default {
         border-radius var(--border-radius)
         border 1px solid var(--border-color)
         background var(--button-bg)
-        display flex
+        display inline-flex
         justify-content center
         align-items center
         vertical-align middle
