@@ -1,6 +1,12 @@
 <template lang="pug">
     .wrapper
-        input(type="text" :value="value", :disabled="disabled", :readonly="readonly", :class="{error}")
+        input(type="text", :value="value", :disabled="disabled", :readonly="readonly",
+            :class="{error}",
+            @change="$emit('change', $event)",
+            @input="$emit('input', $event)",
+            @focus="$emit('focus', $event)",
+            @blur="$emit('blur', $event)",
+        )
         template( v-if="error")
             icon(name="error" class="icon-error")
             span(class="errorMsg") {{error}}
