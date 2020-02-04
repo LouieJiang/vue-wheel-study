@@ -58,7 +58,6 @@ module.exports = function (config) {
     // 当需要使用在Travis做持续集成的时候，需要将浏览器设置为ChromeHeadless,表示是没有不需要界面的chrome
     browsers: ['ChromeHeadless'],
 
-
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: false,
@@ -69,3 +68,4 @@ module.exports = function (config) {
   })
 }
 
+  

@@ -29,24 +29,39 @@
         margin: 20px;
     }
 
+    body {
+        font-size: var(--font-size);
+    }
+
+
+    #app > button, #app > div {
+        margin-bottom: 10px;
+        vertical-align: middle;
+    }
+
 </style>
 
 <body>
-    <div id="app">
-        <g-button >设置</g-button>
-        <g-button icon="settings">设置</g-button>
-        <g-button icon="settings" icon-position="right">设置</g-button>
-        <g-button icon="settings" icon-position="right" :loading="loading1" @click="loading1=!loading1">点击后进入loading</g-button>
-        <g-button-group>
-            <g-button icon="left">上一页</g-button>
-            <g-button>更多</g-button>
-            <g-button icon="right" icon-position="right">下一页</g-button>
-        </g-button-group>
-        <div id="test"></div>
-    </div>
+<div id="app">
+    <g-button>设置</g-button>
+    <g-button icon="settings">设置</g-button>
+    <g-button icon="settings" icon-position="right">设置</g-button>
+    <g-button icon="settings" icon-position="right" :loading="loading1" @click="loading1=!loading1">点击后进入loading
+    </g-button>
+    <g-button-group>
+        <g-button icon="left">上一页</g-button>
+        <g-button>更多</g-button>
+        <g-button icon="right" icon-position="right">下一页</g-button>
+    </g-button-group>
+    <g-input value="文本框"></g-input>
+    <g-input value="disabled文本框" :disabled="true"></g-input>
+    <g-input value="readonly文本框" :readonly="true"></g-input>
+    <g-input value="错误" error="错误"></g-input>
+    <div id="test"></div>
+</div>
 
 </body>
 <script src="./src/app.js"></script>
-<script src="//at.alicdn.com/t/font_1618695_5c68a27z78r.js"></script>
+<script src="//at.alicdn.com/t/font_1618695_kol4pn9jse.js"></script>
 
 </html>
