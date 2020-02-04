@@ -68,9 +68,16 @@ describe('Input', () => {
         vm.$on(eventName, callback)
         //触发change
         let event =  new Event(eventName)
+        //模拟事件没有target的属性，并且该属性为只读属性，使用defineProperty添加，
+        Object.defineProperty(
+          event, 'target',{
+            value:{value:'hi'},
+            enumerable:true
+          }
+        )
         const inputElement = vm.$el.querySelector('input')
         inputElement.dispatchEvent(event)
-        expect(callback).to.have.been.calledWith(event)
+        expect(callback).to.have.been.calledWith(event.target.value)
       })
     })
   })

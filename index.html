@@ -58,7 +58,8 @@
     <g-input value="readonly文本框" :readonly="true"></g-input>
     <g-input value="错误" error="错误"></g-input>
     <g-input value="监听" @change="inputChange"></g-input>
-
+    <g-input v-model="msg"></g-input>
+    <div>{{msg}}</div>
     <div id="test"></div>
 </div>
 
